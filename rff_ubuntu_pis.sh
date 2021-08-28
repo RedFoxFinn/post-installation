@@ -48,6 +48,7 @@ if [[ $dialog == "true" ]]; then
 		13 "Gnome Tweak Tool" off
 		14 "JDK" off
 		15 "Vim" off
+		16 "Regolith DE" off
 	)
 	choices=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
 		clear
@@ -136,6 +137,12 @@ if [[ $dialog == "true" ]]; then
 				printf "\nInstalling Vim\n\n"
 				apt install -y vim
 				;;
+				
+			16)	# Install Regolith DE
+				printf "\nInstalling Regolith\n\n"
+				add-apt-repository ppa:regolith-linux/release
+				apt update
+				apt install -y regolith-desktop i3xrocks i3xrocks-cpu-usage i3xrocks-time i3xrocks-battery i3xrocks-memory
 
 	    esac
 	done
