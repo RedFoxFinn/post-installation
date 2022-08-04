@@ -44,7 +44,7 @@ if [[ $dialog == "true" ]]; then
 		9 "Texmaker" off
 		10 "TeamViewer" off
 		11 "Steam" off
-		12 "Guake" off
+		12 "Terminator" off
 		13 "Gnome Tweak Tool" off
 		14 "JDK" off
 		15 "Vim" off
@@ -62,7 +62,7 @@ if [[ $dialog == "true" ]]; then
 				
 			2)	# Install Nodejs, npm & yarn
 				printf "\nInstalling Nodejs\n\n"
-				curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+				curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 				apt install -y nodejs
 				printf "\nInstalling npm\n\n"
                                 apt install -y npm
@@ -119,8 +119,8 @@ if [[ $dialog == "true" ]]; then
 				;;
 
 			12)	# Install Guake
-				printf "\nInstalling Guake terminal\n\n"
-				apt install -y guake
+				printf "\nInstalling Terminator terminal\n\n"
+				apt install -y terminator
 				;;
 
 			13)	# Install Gnome Tweak Tool
